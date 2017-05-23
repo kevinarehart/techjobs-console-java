@@ -61,8 +61,8 @@ public class TechJobs {
                 String searchTerm = in.nextLine();
                 searchTerm = searchTerm.toUpperCase();
 
-                if ("all".equals(searchField)) {
-                    //System.out.println(JobData.findByValue(searchTerm));
+                if (searchField.equals("all")) {
+                    System.out.println(JobData.findByValue(searchTerm));
                     printJobs(JobData.findByValue(searchTerm));
                 } else {
                     printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
